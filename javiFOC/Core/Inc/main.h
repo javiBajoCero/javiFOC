@@ -57,6 +57,9 @@ void Error_Handler(void);
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
+#define PWM_PREESCALER 170-1
+#define PWM_COUNTER 100-1
+#define PWM_DEADTIME 3
 #define STATUS_REDLED_Pin GPIO_PIN_6
 #define STATUS_REDLED_GPIO_Port GPIOC
 

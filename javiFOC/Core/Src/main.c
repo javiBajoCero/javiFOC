@@ -23,7 +23,7 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include "hardware_pwm.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -88,7 +88,12 @@ int main(void)
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
   MX_TIM1_Init();
+  MX_TIM8_Init();
   /* USER CODE BEGIN 2 */
+
+  configureHardwarePWM(&htim1,TIM_CHANNEL_1,TIM_CHANNEL_2,TIM_CHANNEL_3);
+  HAL_TIM_Base_Start_IT(&htim8);
+
 
   /* USER CODE END 2 */
 
@@ -96,10 +101,12 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
+
+
 	  HAL_GPIO_WritePin(STATUS_REDLED_GPIO_Port, STATUS_REDLED_Pin,GPIO_PIN_SET );
-	  HAL_Delay(500);
+	  HAL_Delay(1);
 	  HAL_GPIO_WritePin(STATUS_REDLED_GPIO_Port, STATUS_REDLED_Pin,GPIO_PIN_RESET );
-	  HAL_Delay(500);
+	  HAL_Delay(1);
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
