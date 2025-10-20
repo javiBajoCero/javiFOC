@@ -1,0 +1,2 @@
+../hw_layer/hardware_pwm.c:13:6:configureHardwarePWM	1
+../hw_layer/hardware_pwm.c:28:6:runHardwarePWM	1

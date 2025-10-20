@@ -9,6 +9,7 @@ RM := rm -rf
 
 # All of the sources participating in the build are defined here
 -include sources.mk
+-include hw_layer/subdir.mk
 -include Drivers/STM32G4xx_HAL_Driver/Src/subdir.mk
 -include Core/Startup/subdir.mk
 -include Core/Src/subdir.mk
@@ -60,8 +61,8 @@ all: main-build
 main-build: javiFOC.elf secondary-outputs
 
 # Tool invocations
-javiFOC.elf javiFOC.map: $(OBJS) $(USER_OBJS) C:\Users\citcea\Documents\GitHub\MUSAE\javiFOC\javiFOC\STM32G431C8UX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "javiFOC.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Users\citcea\Documents\GitHub\MUSAE\javiFOC\javiFOC\STM32G431C8UX_FLASH.ld" --specs=nosys.specs -Wl,-Map="javiFOC.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+javiFOC.elf javiFOC.map: $(OBJS) $(USER_OBJS) C:\Users\JavierMunozSaez\Documents\GitHub\javiFOC\javiFOC\STM32G431C8UX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "javiFOC.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Users\JavierMunozSaez\Documents\GitHub\javiFOC\javiFOC\STM32G431C8UX_FLASH.ld" --specs=nosys.specs -Wl,-Map="javiFOC.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 

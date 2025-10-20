@@ -27,7 +27,7 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
  ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim.h \
  ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim_ex.h \
  ../Core/Inc/tim.h ../Core/Inc/main.h ../Core/Inc/gpio.h \
- ../Core/Inc/hardware_pwm.h ../Core/Inc/tim.h
+ C:/Users/JavierMunozSaez/Documents/GitHub/javiFOC/javiFOC/hw_layer/hardware_pwm.h
 ../Core/Inc/main.h:
 ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal.h:
 ../Core/Inc/stm32g4xx_hal_conf.h:
@@ -59,5 +59,4 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
 ../Core/Inc/tim.h:
 ../Core/Inc/main.h:
 ../Core/Inc/gpio.h:
-../Core/Inc/hardware_pwm.h:
-../Core/Inc/tim.h:
+C:/Users/JavierMunozSaez/Documents/GitHub/javiFOC/javiFOC/hw_layer/hardware_pwm.h:

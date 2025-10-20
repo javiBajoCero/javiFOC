@@ -1,5 +1,5 @@
-Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.o: \
- ../Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c \
+hw_layer/hardware_pwm.o: ../hw_layer/hardware_pwm.c \
+ ../hw_layer/hardware_pwm.h ../Core/Inc/tim.h ../Core/Inc/main.h \
  ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal.h \
  ../Core/Inc/stm32g4xx_hal_conf.h \
  ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc.h \
@@ -27,6 +27,9 @@ Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.o: \
  ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr_ex.h \
  ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim.h \
  ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim_ex.h
+../hw_layer/hardware_pwm.h:
+../Core/Inc/tim.h:
+../Core/Inc/main.h:
 ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal.h:
 ../Core/Inc/stm32g4xx_hal_conf.h:
 ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc.h:
