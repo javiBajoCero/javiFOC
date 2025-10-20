@@ -22,4 +22,7 @@
 "./Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc_ex.o"
 "./Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_tim.o"
 "./Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_tim_ex.o"
+"./foc_layer/adctovoltage_and_current.o"
+"./foc_layer/vabctoduty.o"
+"./hw_layer/hardware_adc.o"
 "./hw_layer/hardware_pwm.o"

@@ -1,4 +1,4 @@
-Core/Src/stm32g4xx_it.o: ../Core/Src/stm32g4xx_it.c \
+foc_layer/vabctoduty.o: ../foc_layer/vabctoduty.c \
  C:/Users/JavierMunozSaez/Documents/GitHub/javiFOC/javiFOC/foc_layer/vabctoduty.h \
  C:/Users/JavierMunozSaez/Documents/GitHub/javiFOC/javiFOC/hw_layer/hardware_pwm.h \
  ../Core/Inc/tim.h ../Core/Inc/main.h \
@@ -28,8 +28,7 @@ Core/Src/stm32g4xx_it.o: ../Core/Src/stm32g4xx_it.c \
  ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr.h \
  ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr_ex.h \
  ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim.h \
- ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim_ex.h \
- ../Core/Inc/main.h ../Core/Inc/stm32g4xx_it.h
+ ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim_ex.h
 C:/Users/JavierMunozSaez/Documents/GitHub/javiFOC/javiFOC/foc_layer/vabctoduty.h:
 C:/Users/JavierMunozSaez/Documents/GitHub/javiFOC/javiFOC/hw_layer/hardware_pwm.h:
 ../Core/Inc/tim.h:
@@ -61,5 +60,3 @@ C:/Users/JavierMunozSaez/Documents/GitHub/javiFOC/javiFOC/hw_layer/hardware_pwm.
 ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr_ex.h:
 ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim.h:
 ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim_ex.h:
-../Core/Inc/main.h:
-../Core/Inc/stm32g4xx_it.h:

@@ -18,6 +18,7 @@
 /* USER CODE END Header */
 
 /* Includes ------------------------------------------------------------------*/
+#include <vabctoduty.h>
 #include "main.h"
 #include "stm32g4xx_it.h"
 /* Private includes ----------------------------------------------------------*/
@@ -230,7 +231,6 @@ float rampup=0;
 uint8_t a=0;
 uint8_t b=256/3;
 uint8_t c=256*2/3;
-struct_duty_cycles_pu duty;
 /**
   * @brief This function handles TIM8 update interrupt.
   */
@@ -241,9 +241,9 @@ void TIM8_UP_IRQHandler(void)
   /* USER CODE END TIM8_UP_IRQn 0 */
   HAL_TIM_IRQHandler(&htim8);
   /* USER CODE BEGIN TIM8_UP_IRQn 1 */
-  duty.dutyA=rampup*sineWave[a];
-  duty.dutyB=rampup*sineWave[b];
-  duty.dutyC=rampup*sineWave[c];
+  vabc.va=rampup*sineWave[a];
+  vabc.vb=rampup*sineWave[b];
+  vabc.vc=rampup*sineWave[c];
 
   if(rampup<rampuplimit){
 	  rampup+=rampuplimit/1000;
@@ -252,7 +252,8 @@ void TIM8_UP_IRQHandler(void)
   a++;
   b++;
   c++;
-  runHardwarePWM(&duty);
+  run_vabc_to_duty_modulator(1.0, &vabc, &pwm_duty_cycles);
+  runHardwarePWM(&pwm_duty_cycles,&pwm_registers);
   /* USER CODE END TIM8_UP_IRQn 1 */
 }
 

@@ -1,0 +1,5 @@
+../foc_layer/vabctoduty.c:31:21:fabsf_fast	2
+../foc_layer/vabctoduty.c:34:21:apply_min_magnitude	4
+../foc_layer/vabctoduty.c:43:21:clampf	3
+../foc_layer/vabctoduty.c:49:6:configure_vabc_to_duty_modulator	1
+../foc_layer/vabctoduty.c:63:6:run_vabc_to_duty_modulator	14
