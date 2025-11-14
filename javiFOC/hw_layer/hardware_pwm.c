@@ -24,12 +24,13 @@ void configureHardwarePWM(TIM_HandleTypeDef *pwm_htim,
 	_channel1=channel1;
 	_channel2=channel2;
 	_channel3=channel3;
+	HAL_TIM_Base_Start_IT(_pwm_htim);
 	HAL_TIM_PWM_Start	(_pwm_htim, _channel1);
-	HAL_TIMEx_PWMN_Start(_pwm_htim, _channel1);
+	HAL_TIMEx_PWMN_Start	(_pwm_htim, _channel1);
 	HAL_TIM_PWM_Start	(_pwm_htim, _channel2);
-	HAL_TIMEx_PWMN_Start(_pwm_htim, _channel2);
+	HAL_TIMEx_PWMN_Start	(_pwm_htim, _channel2);
 	HAL_TIM_PWM_Start	(_pwm_htim, _channel3);
-	HAL_TIMEx_PWMN_Start(_pwm_htim, _channel3);
+	HAL_TIMEx_PWMN_Start	(_pwm_htim, _channel3);
 }
 
 void runHardwarePWM(struct_duty_cycles_pu *d, struct_raw_timer_register_values *reg)

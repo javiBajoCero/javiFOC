@@ -1,0 +1,3 @@
+../hw_layer/hardware_adc.c:31:6:configureHardwareADC	1
+../hw_layer/hardware_adc.c:42:6:decodeHArdwareADC	1
+../hw_layer/hardware_adc.c:60:6:HAL_ADC_ConvCpltCallback	1

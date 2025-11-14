@@ -5,15 +5,18 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
-../foc_layer/adctovoltage_and_current.c \
+../foc_layer/angle_estimator.c \
+../foc_layer/clarke_and_park.c \
 ../foc_layer/vabctoduty.c 
 
 OBJS += \
-./foc_layer/adctovoltage_and_current.o \
+./foc_layer/angle_estimator.o \
+./foc_layer/clarke_and_park.o \
 ./foc_layer/vabctoduty.o 
 
 C_DEPS += \
-./foc_layer/adctovoltage_and_current.d \
+./foc_layer/angle_estimator.d \
+./foc_layer/clarke_and_park.d \
 ./foc_layer/vabctoduty.d 
 
 
@@ -24,7 +27,7 @@ foc_layer/%.o foc_layer/%.su foc_layer/%.cyclo: ../foc_layer/%.c foc_layer/subdi
 clean: clean-foc_layer
 
 clean-foc_layer:
-	-$(RM) ./foc_layer/adctovoltage_and_current.cyclo ./foc_layer/adctovoltage_and_current.d ./foc_layer/adctovoltage_and_current.o ./foc_layer/adctovoltage_and_current.su ./foc_layer/vabctoduty.cyclo ./foc_layer/vabctoduty.d ./foc_layer/vabctoduty.o ./foc_layer/vabctoduty.su
+	-$(RM) ./foc_layer/angle_estimator.cyclo ./foc_layer/angle_estimator.d ./foc_layer/angle_estimator.o ./foc_layer/angle_estimator.su ./foc_layer/clarke_and_park.cyclo ./foc_layer/clarke_and_park.d ./foc_layer/clarke_and_park.o ./foc_layer/clarke_and_park.su ./foc_layer/vabctoduty.cyclo ./foc_layer/vabctoduty.d ./foc_layer/vabctoduty.o ./foc_layer/vabctoduty.su
 
 .PHONY: clean-foc_layer
 

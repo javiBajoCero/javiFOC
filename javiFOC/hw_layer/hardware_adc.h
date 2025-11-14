@@ -8,6 +8,8 @@
 #ifndef HARDWARE_ADC_H_
 #define HARDWARE_ADC_H_
 
+#include "adc.h"
+
 typedef struct {
 	uint32_t ia;
 	uint32_t ib;
@@ -15,10 +17,16 @@ typedef struct {
 }struct_raw_adc_currents;
 
 typedef struct {
-	uint32_t vdc;
-}struct_raw_adc_voltages;
+	float vdc;//Volts
+	float temperature_feedback;//Celsius Degrees
+	float bluepotentiometer;//%per one
+	float internal_stm32_temperature;//Celsius Degrees
+	float internal_stm32_vref;//Volts
+}struct_decoded_adc_variables;
 
-void configureHardwareADC();
+extern struct_decoded_adc_variables adc_variables;
+
+void configureHardwareADC(ADC_HandleTypeDef *slow_hadc,TIM_HandleTypeDef *slow_adc_trigger_htim);
 
 void decodeHArdwareADC();
 

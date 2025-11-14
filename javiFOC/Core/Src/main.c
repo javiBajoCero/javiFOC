@@ -20,12 +20,16 @@
 #include "main.h"
 #include "adc.h"
 #include "dma.h"
+#include "opamp.h"
 #include "tim.h"
 #include "gpio.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "hardware_pwm.h"
+#include "hardware_adc.h"
+#include "vabctoduty.h"
+#include "angle_estimator.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -46,7 +50,7 @@
 /* Private variables ---------------------------------------------------------*/
 
 /* USER CODE BEGIN PV */
-
+uint32_t superloop_delay_ms=1;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -91,27 +95,28 @@ int main(void)
   MX_GPIO_Init();
   MX_DMA_Init();
   MX_TIM1_Init();
-  MX_TIM8_Init();
   MX_ADC1_Init();
   MX_TIM15_Init();
+  MX_ADC2_Init();
+  MX_OPAMP1_Init();
+  MX_OPAMP2_Init();
+  MX_OPAMP3_Init();
   /* USER CODE BEGIN 2 */
-
+  configure_vabc_to_duty_modulator();
   configureHardwarePWM(&htim1,TIM_CHANNEL_1,TIM_CHANNEL_2,TIM_CHANNEL_3);
-  HAL_TIM_Base_Start_IT(&htim8);
-
-
+  configureHardwareADC(&hadc1,&htim15);
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
+
   while (1)
   {
+	  HAL_Delay(superloop_delay_ms);
 
+		 sin_index+=20*adc_variables.bluepotentiometer;
+		 cos_index+=20*adc_variables.bluepotentiometer;
 
-	  HAL_GPIO_WritePin(STATUS_REDLED_GPIO_Port, STATUS_REDLED_Pin,GPIO_PIN_SET );
-	  HAL_Delay(1);
-	  HAL_GPIO_WritePin(STATUS_REDLED_GPIO_Port, STATUS_REDLED_Pin,GPIO_PIN_RESET );
-	  HAL_Delay(1);
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */

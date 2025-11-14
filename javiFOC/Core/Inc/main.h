@@ -59,7 +59,9 @@ void Error_Handler(void);
 /* Private defines -----------------------------------------------------------*/
 #define PWM_PREESCALER 170-1
 #define PWM_COUNTER 100-1
-#define PWM_DEADTIME 3
+#define SLOW_ADC_PREESCALER 17000-1
+#define PWM_DEADTIME 37
+#define SLOW_ADC_COUNTER 100-1
 #define ADC_VBUS_Pin GPIO_PIN_0
 #define ADC_VBUS_GPIO_Port GPIOA
 #define ADC_BLUE_POTENTIOMETER_Pin GPIO_PIN_12

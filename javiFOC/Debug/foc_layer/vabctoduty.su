@@ -1,5 +1,5 @@
-../foc_layer/vabctoduty.c:31:21:fabsf_fast	16	static
-../foc_layer/vabctoduty.c:34:21:apply_min_magnitude	24	static
-../foc_layer/vabctoduty.c:43:21:clampf	24	static
-../foc_layer/vabctoduty.c:49:6:configure_vabc_to_duty_modulator	4	static
-../foc_layer/vabctoduty.c:63:6:run_vabc_to_duty_modulator	88	static
+../foc_layer/vabctoduty.c:22:21:fabsf_fast	16	static
+../foc_layer/vabctoduty.c:25:21:apply_min_magnitude	24	static
+../foc_layer/vabctoduty.c:34:21:clampf	24	static
+../foc_layer/vabctoduty.c:40:6:configure_vabc_to_duty_modulator	4	static
+../foc_layer/vabctoduty.c:51:6:run_vabc_to_duty_modulator	40	static

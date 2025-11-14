@@ -1,5 +1,5 @@
 foc_layer/vabctoduty.o: ../foc_layer/vabctoduty.c \
- C:/Users/JavierMunozSaez/Documents/GitHub/javiFOC/javiFOC/foc_layer/vabctoduty.h \
+ ../foc_layer/vabctoduty.h \
  C:/Users/JavierMunozSaez/Documents/GitHub/javiFOC/javiFOC/hw_layer/hardware_pwm.h \
  ../Core/Inc/tim.h ../Core/Inc/main.h \
  ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal.h \
@@ -28,11 +28,14 @@ foc_layer/vabctoduty.o: ../foc_layer/vabctoduty.c \
  ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash.h \
  ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash_ex.h \
  ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash_ramfunc.h \
+ ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_opamp.h \
+ ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_opamp_ex.h \
  ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr.h \
  ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr_ex.h \
  ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim.h \
- ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim_ex.h
-C:/Users/JavierMunozSaez/Documents/GitHub/javiFOC/javiFOC/foc_layer/vabctoduty.h:
+ ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim_ex.h \
+ ../foc_layer/clarke_and_park.h
+../foc_layer/vabctoduty.h:
 C:/Users/JavierMunozSaez/Documents/GitHub/javiFOC/javiFOC/hw_layer/hardware_pwm.h:
 ../Core/Inc/tim.h:
 ../Core/Inc/main.h:
@@ -62,7 +65,10 @@ C:/Users/JavierMunozSaez/Documents/GitHub/javiFOC/javiFOC/hw_layer/hardware_pwm.
 ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash.h:
 ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash_ex.h:
 ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash_ramfunc.h:
+../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_opamp.h:
+../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_opamp_ex.h:
 ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr.h:
 ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr_ex.h:
 ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim.h:
 ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim_ex.h:
+../foc_layer/clarke_and_park.h:

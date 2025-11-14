@@ -25,6 +25,8 @@ Core/Src/stm32g4xx_it.o: ../Core/Src/stm32g4xx_it.c ../Core/Inc/main.h \
  ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash.h \
  ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash_ex.h \
  ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash_ramfunc.h \
+ ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_opamp.h \
+ ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_opamp_ex.h \
  ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr.h \
  ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr_ex.h \
  ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim.h \
@@ -32,7 +34,12 @@ Core/Src/stm32g4xx_it.o: ../Core/Src/stm32g4xx_it.c ../Core/Inc/main.h \
  ../Core/Inc/stm32g4xx_it.h \
  C:/Users/JavierMunozSaez/Documents/GitHub/javiFOC/javiFOC/foc_layer/vabctoduty.h \
  C:/Users/JavierMunozSaez/Documents/GitHub/javiFOC/javiFOC/hw_layer/hardware_pwm.h \
- ../Core/Inc/tim.h ../Core/Inc/main.h
+ ../Core/Inc/tim.h ../Core/Inc/main.h \
+ C:/Users/JavierMunozSaez/Documents/GitHub/javiFOC/javiFOC/foc_layer/clarke_and_park.h \
+ C:/Users/JavierMunozSaez/Documents/GitHub/javiFOC/javiFOC/hw_layer/hardware_adc.h \
+ ../Core/Inc/adc.h \
+ C:/Users/JavierMunozSaez/Documents/GitHub/javiFOC/javiFOC/foc_layer/clarke_and_park.h \
+ C:/Users/JavierMunozSaez/Documents/GitHub/javiFOC/javiFOC/foc_layer/angle_estimator.h
 ../Core/Inc/main.h:
 ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal.h:
 ../Core/Inc/stm32g4xx_hal_conf.h:
@@ -60,6 +67,8 @@ Core/Src/stm32g4xx_it.o: ../Core/Src/stm32g4xx_it.c ../Core/Inc/main.h \
 ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash.h:
 ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash_ex.h:
 ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash_ramfunc.h:
+../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_opamp.h:
+../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_opamp_ex.h:
 ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr.h:
 ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr_ex.h:
 ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim.h:
@@ -69,3 +78,8 @@ C:/Users/JavierMunozSaez/Documents/GitHub/javiFOC/javiFOC/foc_layer/vabctoduty.h
 C:/Users/JavierMunozSaez/Documents/GitHub/javiFOC/javiFOC/hw_layer/hardware_pwm.h:
 ../Core/Inc/tim.h:
 ../Core/Inc/main.h:
+C:/Users/JavierMunozSaez/Documents/GitHub/javiFOC/javiFOC/foc_layer/clarke_and_park.h:
+C:/Users/JavierMunozSaez/Documents/GitHub/javiFOC/javiFOC/hw_layer/hardware_adc.h:
+../Core/Inc/adc.h:
+C:/Users/JavierMunozSaez/Documents/GitHub/javiFOC/javiFOC/foc_layer/clarke_and_park.h:
+C:/Users/JavierMunozSaez/Documents/GitHub/javiFOC/javiFOC/foc_layer/angle_estimator.h:

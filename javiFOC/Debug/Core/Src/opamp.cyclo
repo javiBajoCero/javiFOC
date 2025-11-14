@@ -1,0 +1,3 @@
+../Core/Src/opamp.c:28:6:MX_OPAMP1_Init	1
+../Core/Src/opamp.c:44:6:MX_OPAMP2_Init	1
+../Core/Src/opamp.c:60:6:MX_OPAMP3_Init	1

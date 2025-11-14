@@ -38,6 +38,12 @@
         * Output
         * EVENT_OUT
         * EXTI
+     PA1   ------> OPAMP1_VINP
+     PA3   ------> OPAMP1_VINM0
+     PA5   ------> OPAMP2_VINM0
+     PA7   ------> OPAMP2_VINP
+     PB0   ------> OPAMP3_VINP
+     PB2   ------> OPAMP3_VINM0
 */
 void MX_GPIO_Init(void)
 {
@@ -52,6 +58,18 @@ void MX_GPIO_Init(void)
 
   /*Configure GPIO pin Output Level */
   HAL_GPIO_WritePin(STATUS_REDLED_GPIO_Port, STATUS_REDLED_Pin, GPIO_PIN_RESET);
+
+  /*Configure GPIO pins : PA1 PA3 PA5 PA7 */
+  GPIO_InitStruct.Pin = GPIO_PIN_1|GPIO_PIN_3|GPIO_PIN_5|GPIO_PIN_7;
+  GPIO_InitStruct.Mode = GPIO_MODE_ANALOG;
+  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
+
+  /*Configure GPIO pins : PB0 PB2 */
+  GPIO_InitStruct.Pin = GPIO_PIN_0|GPIO_PIN_2;
+  GPIO_InitStruct.Mode = GPIO_MODE_ANALOG;
+  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
 
   /*Configure GPIO pin : STATUS_REDLED_Pin */
   GPIO_InitStruct.Pin = STATUS_REDLED_Pin;

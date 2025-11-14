@@ -1,0 +1,7 @@
+../foc_layer/clarke_and_park.c:11:21:_two_thirds	4	static
+../foc_layer/clarke_and_park.c:12:21:_one_third	4	static
+../foc_layer/clarke_and_park.c:13:21:_sqrt3_over_2	4	static
+../foc_layer/clarke_and_park.c:17:6:clarke_forward	40	static
+../foc_layer/clarke_and_park.c:33:6:clarke_inverse	32	static
+../foc_layer/clarke_and_park.c:48:6:park_forward	32	static
+../foc_layer/clarke_and_park.c:61:6:park_inverse	32	static
