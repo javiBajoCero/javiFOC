@@ -9,6 +9,7 @@
 
 uint8_t sin_index=0;
 uint8_t cos_index=0;
+uint8_t sector=0;
 
 float sineWave[256] = {
     0.000000, 0.024541, 0.049068, 0.073565, 0.098017, 0.122411, 0.146730, 0.170962, 0.195090, 0.219101,
@@ -68,4 +69,17 @@ float cosineWave[256] = {
     0.989177, 0.992480, 0.995185, 0.997290, 0.998795, 0.999699
 };
 
+
+uint8_t Calculate_SVPWM_sector_from_index(uint8_t index)
+{
+    // 256 samples, 6 sectors → 42 each + 4 extra distributed
+    // Sector sizes: 43,43,43,43,42,42
+
+    if (index < 43)          return 1;   // 0–42
+    else if (index < 86)     return 2;   // 43–85
+    else if (index < 129)    return 3;   // 86–128
+    else if (index < 172)    return 4;   // 129–171
+    else if (index < 214)    return 5;   // 172–213
+    else                     return 6;   // 214–255
+}
 

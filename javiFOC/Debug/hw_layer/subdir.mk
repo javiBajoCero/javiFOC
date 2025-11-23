@@ -6,14 +6,17 @@
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
 ../hw_layer/hardware_adc.c \
+../hw_layer/hardware_opamp.c \
 ../hw_layer/hardware_pwm.c 
 
 OBJS += \
 ./hw_layer/hardware_adc.o \
+./hw_layer/hardware_opamp.o \
 ./hw_layer/hardware_pwm.o 
 
 C_DEPS += \
 ./hw_layer/hardware_adc.d \
+./hw_layer/hardware_opamp.d \
 ./hw_layer/hardware_pwm.d 
 
 
@@ -24,7 +27,7 @@ hw_layer/%.o hw_layer/%.su hw_layer/%.cyclo: ../hw_layer/%.c hw_layer/subdir.mk
 clean: clean-hw_layer
 
 clean-hw_layer:
-	-$(RM) ./hw_layer/hardware_adc.cyclo ./hw_layer/hardware_adc.d ./hw_layer/hardware_adc.o ./hw_layer/hardware_adc.su ./hw_layer/hardware_pwm.cyclo ./hw_layer/hardware_pwm.d ./hw_layer/hardware_pwm.o ./hw_layer/hardware_pwm.su
+	-$(RM) ./hw_layer/hardware_adc.cyclo ./hw_layer/hardware_adc.d ./hw_layer/hardware_adc.o ./hw_layer/hardware_adc.su ./hw_layer/hardware_opamp.cyclo ./hw_layer/hardware_opamp.d ./hw_layer/hardware_opamp.o ./hw_layer/hardware_opamp.su ./hw_layer/hardware_pwm.cyclo ./hw_layer/hardware_pwm.d ./hw_layer/hardware_pwm.o ./hw_layer/hardware_pwm.su
 
 .PHONY: clean-hw_layer
 

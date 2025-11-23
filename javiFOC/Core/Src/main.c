@@ -30,6 +30,7 @@
 #include "hardware_adc.h"
 #include "vabctoduty.h"
 #include "angle_estimator.h"
+#include "hardware_opamp.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -102,9 +103,12 @@ int main(void)
   MX_OPAMP2_Init();
   MX_OPAMP3_Init();
   /* USER CODE BEGIN 2 */
+
   configure_vabc_to_duty_modulator();
+  configureHardwareOpAmp(&hopamp1, &hopamp2, &hopamp3);
+  configureSlowHardwareADC(&hadc1,&htim15);
+  configureFastHardwareADC(&hadc2);
   configureHardwarePWM(&htim1,TIM_CHANNEL_1,TIM_CHANNEL_2,TIM_CHANNEL_3);
-  configureHardwareADC(&hadc1,&htim15);
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -117,6 +121,7 @@ int main(void)
 		 sin_index+=20*adc_variables.bluepotentiometer;
 		 cos_index+=20*adc_variables.bluepotentiometer;
 
+		 sector=Calculate_SVPWM_sector_from_index(sin_index);
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */

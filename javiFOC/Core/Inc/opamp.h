@@ -32,6 +32,12 @@ extern "C" {
 
 /* USER CODE END Includes */
 
+extern OPAMP_HandleTypeDef hopamp1;
+
+extern OPAMP_HandleTypeDef hopamp2;
+
+extern OPAMP_HandleTypeDef hopamp3;
+
 /* USER CODE BEGIN Private defines */
 
 /* USER CODE END Private defines */

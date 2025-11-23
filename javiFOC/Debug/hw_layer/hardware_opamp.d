@@ -1,4 +1,5 @@
-Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
+hw_layer/hardware_opamp.o: ../hw_layer/hardware_opamp.c \
+ ../hw_layer/hardware_opamp.h ../Core/Inc/opamp.h ../Core/Inc/main.h \
  ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal.h \
  ../Core/Inc/stm32g4xx_hal_conf.h \
  ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc.h \
@@ -30,15 +31,9 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
  ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr.h \
  ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr_ex.h \
  ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim.h \
- ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim_ex.h \
- ../Core/Inc/adc.h ../Core/Inc/main.h ../Core/Inc/dma.h \
- ../Core/Inc/opamp.h ../Core/Inc/tim.h ../Core/Inc/gpio.h \
- C:/Users/JavierMunozSaez/Documents/GitHub/javiFOC/javiFOC/hw_layer/hardware_pwm.h \
- C:/Users/JavierMunozSaez/Documents/GitHub/javiFOC/javiFOC/hw_layer/hardware_adc.h \
- C:/Users/JavierMunozSaez/Documents/GitHub/javiFOC/javiFOC/foc_layer/vabctoduty.h \
- C:/Users/JavierMunozSaez/Documents/GitHub/javiFOC/javiFOC/foc_layer/clarke_and_park.h \
- C:/Users/JavierMunozSaez/Documents/GitHub/javiFOC/javiFOC/foc_layer/angle_estimator.h \
- C:/Users/JavierMunozSaez/Documents/GitHub/javiFOC/javiFOC/hw_layer/hardware_opamp.h
+ ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim_ex.h
+../hw_layer/hardware_opamp.h:
+../Core/Inc/opamp.h:
 ../Core/Inc/main.h:
 ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal.h:
 ../Core/Inc/stm32g4xx_hal_conf.h:
@@ -72,15 +67,3 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
 ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr_ex.h:
 ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim.h:
 ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim_ex.h:
-../Core/Inc/adc.h:
-../Core/Inc/main.h:
-../Core/Inc/dma.h:
-../Core/Inc/opamp.h:
-../Core/Inc/tim.h:
-../Core/Inc/gpio.h:
-C:/Users/JavierMunozSaez/Documents/GitHub/javiFOC/javiFOC/hw_layer/hardware_pwm.h:
-C:/Users/JavierMunozSaez/Documents/GitHub/javiFOC/javiFOC/hw_layer/hardware_adc.h:
-C:/Users/JavierMunozSaez/Documents/GitHub/javiFOC/javiFOC/foc_layer/vabctoduty.h:
-C:/Users/JavierMunozSaez/Documents/GitHub/javiFOC/javiFOC/foc_layer/clarke_and_park.h:
-C:/Users/JavierMunozSaez/Documents/GitHub/javiFOC/javiFOC/foc_layer/angle_estimator.h:
-C:/Users/JavierMunozSaez/Documents/GitHub/javiFOC/javiFOC/hw_layer/hardware_opamp.h:

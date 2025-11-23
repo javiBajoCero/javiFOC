@@ -1,4 +1,5 @@
-../hw_layer/hardware_adc.c:31:6:configureHardwareADC	16	static
-../hw_layer/hardware_adc.c:50:7:ntc_temp	48	static
-../hw_layer/hardware_adc.c:84:6:decodeHArdwareADC	24	static
-../hw_layer/hardware_adc.c:114:6:HAL_ADC_ConvCpltCallback	16	static
+../hw_layer/hardware_adc.c:37:6:configureSlowHardwareADC	16	static
+../hw_layer/hardware_adc.c:46:6:configureFastHardwareADC	16	static
+../hw_layer/hardware_adc.c:64:7:ntc_temp	48	static
+../hw_layer/hardware_adc.c:98:6:decodeSlowHardwareADC	24	static
+../hw_layer/hardware_adc.c:128:6:HAL_ADC_ConvCpltCallback	16	static

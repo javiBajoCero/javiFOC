@@ -34,4 +34,5 @@
 "./foc_layer/clarke_and_park.o"
 "./foc_layer/vabctoduty.o"
 "./hw_layer/hardware_adc.o"
+"./hw_layer/hardware_opamp.o"
 "./hw_layer/hardware_pwm.o"

@@ -15,5 +15,8 @@ extern uint8_t cos_index;
 
 extern float sineWave[256];
 extern float cosineWave[256];
+extern uint8_t sector;
+
+uint8_t Calculate_SVPWM_sector_from_index(uint8_t index);
 
 #endif /* ANGLE_ESTIMATOR_H_ */

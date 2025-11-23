@@ -11,6 +11,9 @@
 #define BLUEPOTENTIOMETER_ADC_BUFFER_INDEX 2
 #define INTERNAL_STM32_TEMP_ADC_BUFFER_INDEX 3
 #define INTERNAL_STM32_VREF_ADC_BUFFER_INDEX 4
+
+#define FAST_ADC_BUFFER_LENGTH 2
+
 //internal temperature sensor factory calibration
 #define TS_CAL1     ((uint16_t*)0x1FFF75A8) // @30°C
 #define TS_CAL2     ((uint16_t*)0x1FFF75CA) // @110°C
@@ -23,18 +26,29 @@
 
 ADC_HandleTypeDef *_slow_hadc;
 TIM_HandleTypeDef *_slow_adc_trigger_htim;
+ADC_HandleTypeDef *_fast_hadc;
+TIM_HandleTypeDef *_fast_adc_trigger_htim;
 
 uint32_t slow_adc_buffer[SLOW_ADC_BUFFER_LENGTH];
+uint32_t fastadc_buffer[FAST_ADC_BUFFER_LENGTH];
 
 struct_decoded_adc_variables adc_variables;
 
-void configureHardwareADC(ADC_HandleTypeDef *slow_hadc,TIM_HandleTypeDef *slow_adc_trigger_htim){
+void configureSlowHardwareADC(ADC_HandleTypeDef *slow_hadc,TIM_HandleTypeDef *slow_adc_trigger_htim){
 	_slow_hadc=slow_hadc;
 	_slow_adc_trigger_htim=slow_adc_trigger_htim;
 
 	HAL_ADCEx_Calibration_Start(_slow_hadc, ADC_SINGLE_ENDED);
 	HAL_ADC_Start_DMA(_slow_hadc, slow_adc_buffer, SLOW_ADC_BUFFER_LENGTH);
 	HAL_TIM_Base_Start(_slow_adc_trigger_htim);
+}
+
+void configureFastHardwareADC(ADC_HandleTypeDef *fast_hadc){
+	_fast_hadc=fast_hadc;
+
+	HAL_ADCEx_Calibration_Start(_fast_hadc, ADC_SINGLE_ENDED);
+	HAL_ADC_Start_DMA(_fast_hadc, fastadc_buffer, FAST_ADC_BUFFER_LENGTH);
+
 }
 
 /**
@@ -81,7 +95,7 @@ float ntc_temp(uint16_t adc, float vdda) {
 }
 
 
-void decodeHArdwareADC(){
+void decodeSlowHardwareADC(){
 	uint16_t vref_raw 					= slow_adc_buffer[INTERNAL_STM32_VREF_ADC_BUFFER_INDEX];
 	uint16_t temp_raw 					= slow_adc_buffer[INTERNAL_STM32_TEMP_ADC_BUFFER_INDEX];
 	uint16_t bluepote_raw 				= slow_adc_buffer[BLUEPOTENTIOMETER_ADC_BUFFER_INDEX];
@@ -116,6 +130,6 @@ void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef* hadc)
     // Full buffer is ready here (called repeatedly in circular mode)
     // Process or signal a task
 	HAL_GPIO_WritePin(STATUS_REDLED_GPIO_Port, STATUS_REDLED_Pin,GPIO_PIN_SET );
-	decodeHArdwareADC();
+	decodeSlowHardwareADC();
 	HAL_GPIO_WritePin(STATUS_REDLED_GPIO_Port, STATUS_REDLED_Pin,GPIO_PIN_RESET );
 }

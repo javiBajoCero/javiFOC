@@ -26,8 +26,8 @@ typedef struct {
 
 extern struct_decoded_adc_variables adc_variables;
 
-void configureHardwareADC(ADC_HandleTypeDef *slow_hadc,TIM_HandleTypeDef *slow_adc_trigger_htim);
-
-void decodeHArdwareADC();
+void configureSlowHardwareADC(ADC_HandleTypeDef *slow_hadc,TIM_HandleTypeDef *slow_adc_trigger_htim);
+void configureFastHardwareADC(ADC_HandleTypeDef *fast_hadc);
+void decodeSlowHardwareADC();
 
 #endif /* HARDWARE_ADC_H_ */
