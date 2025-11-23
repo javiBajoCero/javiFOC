@@ -57,8 +57,8 @@ void Error_Handler(void);
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
-#define PWM_PREESCALER 170-1
-#define PWM_COUNTER 100-1
+#define PWM_PREESCALER 17-1
+#define PWM_COUNTER 250-1
 #define SLOW_ADC_PREESCALER 17000-1
 #define PWM_DEADTIME 37
 #define SLOW_ADC_COUNTER 100-1

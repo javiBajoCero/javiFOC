@@ -1,3 +1,4 @@
 ../hw_layer/hardware_adc.c:31:6:configureHardwareADC	1
-../hw_layer/hardware_adc.c:42:6:decodeHArdwareADC	1
-../hw_layer/hardware_adc.c:60:6:HAL_ADC_ConvCpltCallback	1
+../hw_layer/hardware_adc.c:50:7:ntc_temp	5
+../hw_layer/hardware_adc.c:84:6:decodeHArdwareADC	4
+../hw_layer/hardware_adc.c:114:6:HAL_ADC_ConvCpltCallback	1

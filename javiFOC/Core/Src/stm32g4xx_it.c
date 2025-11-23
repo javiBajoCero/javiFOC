@@ -237,7 +237,7 @@ void TIM1_UP_TIM16_IRQHandler(void)
 	decodeHArdwareADC();
 	park_inverse(&vdq0, cosineWave[cos_index], sineWave[sin_index], &valphabeta);
 	clarke_inverse(&valphabeta, &vabc);
-	run_vabc_to_duty_modulator(1.0, &vabc, &pwm_duty_cycles);
+	run_vabc_to_duty_modulator(adc_variables.vdc/12.0f, &vabc, &pwm_duty_cycles);
 	runHardwarePWM(&pwm_duty_cycles, &pwm_registers);
 	HAL_GPIO_WritePin(STATUS_REDLED_GPIO_Port, STATUS_REDLED_Pin,GPIO_PIN_RESET );
   /* USER CODE END TIM1_UP_TIM16_IRQn 0 */
